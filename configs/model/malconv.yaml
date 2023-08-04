@@ -1,0 +1,23 @@
+_target_: src.models.malconv_module.MalconvModule
+
+optimizer:
+  _target_: torch.optim.Adam
+  _partial_: true
+  lr: 0.001
+  weight_decay: 0.0
+
+scheduler:
+  _target_: torch.optim.lr_scheduler.ReduceLROnPlateau
+  _partial_: true
+  mode: min
+  factor: 0.1
+  patience: 10
+
+network:
+  _target_: src.models.malconv.MalConv
+  input_length: 1_048_576
+  window_size: 500
+  stride: 500
+  channels: 128
+  embed_size: 8
+  output_size: 8

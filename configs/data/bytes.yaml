@@ -1,0 +1,3 @@
+_target_: src.datasets.bytes.BytesDataModule
+
+num_workers: 16

@@ -1,0 +1,6 @@
+_target_: src.datasets.ember.EmberDataModule
+
+train_size: 0.6
+val_size: 0.2
+test_size: 0.2
+batch_size: 32
