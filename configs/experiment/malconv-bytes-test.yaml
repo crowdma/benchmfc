@@ -1,0 +1,49 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /data: bytes.yaml
+  - override /model: malconv.yaml
+  - override /trainer: default.yaml
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+# name of the run determines folder name in logs
+data_name: MFC
+pack_ratio: 0.0
+task_name: malconv-bytes-MFC-0.0
+seed: 42
+
+tags: ["${task_name}", "${data_name}", "${pack_ratio}"]
+
+trainer:
+  accelerator: gpu
+  min_epochs: 20
+  max_epochs: 50
+  gradient_clip_val: 0.5
+
+model:
+  optimizer:
+    lr: 0.001
+  network:
+    input_length: 1_048_576
+    window_size: 500
+    stride: 500
+    channels: 128
+    embed_size: 8
+    output_size: 8
+
+data:
+  data_name: ${data_name}
+  train_size: 0.6
+  val_size: 0.2
+  test_size: 0.2
+  batch_size: 32
+  num_workers: 16
+  pack_ratio: ${pack_ratio}
+  first_n_byte: 1_048_576
+
+ckpt_path: ${paths.root_dir}/logs/malconv-bytes-MFC-0.0/train/runs/2023-07-30_18-23-58/checkpoints/epoch_020.ckpt

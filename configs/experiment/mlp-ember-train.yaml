@@ -1,0 +1,50 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /data: ember.yaml
+  - override /model: mlp.yaml
+  - override /callbacks: default.yaml
+  - override /logger: wandb.yaml
+  - override /trainer: default.yaml
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+# name of the run determines folder name in logs
+data_name: MFC
+pack_ratio: 0.0
+task_name: mlp-ember-MFC-0.0
+seed: 42
+
+tags: ["${task_name}", "${data_name}", "${pack_ratio}"]
+
+trainer:
+  accelerator: gpu
+  min_epochs: 20
+  max_epochs: 50
+  gradient_clip_val: 0.5
+
+model:
+  optimizer:
+    lr: 0.001
+  network:
+    input_size: 2381
+    hidden_units: [1024, 512, 256]
+    output_size: 8
+
+data:
+  data_name: ${data_name}
+  train_size: 0.6
+  val_size: 0.2
+  test_size: 0.2
+  batch_size: 32
+  pack_ratio: ${pack_ratio}
+
+logger:
+  wandb:
+    name: ${task_name}
+    group: mlp-ember
+    project: lab-benchmfc
