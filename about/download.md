@@ -16,3 +16,5 @@ Please note that an email not following the conditions might be ignored. And we 
 1. Wuhan University
 2. Huazhong University of Science and Technology
 3. Southeast University
+4. Taibah University
+5. Université catholique de Louvain
