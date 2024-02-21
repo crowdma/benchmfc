@@ -18,3 +18,4 @@ Please note that an email not following the conditions might be ignored. And we 
 3. Southeast University
 4. Taibah University
 5. Université catholique de Louvain
+6. University of Alberta
