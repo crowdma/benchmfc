@@ -2,7 +2,7 @@
 
 All samples in the dataset were not disarmed. To avoid misuse, please read and agree to the following conditions before sending us emails.
 
-- Please email Yongkang (jiangyongkang@sjtu.edu.cn).
+- Please email Yongkang (jiangyongkang@alumni.sjtu.edu.cn).
 - Do not share the data with any others (except your co-authors for the project). We are happy to share with other researchers based upon their requests.
 - Explain in a few sentences of your plan to do with these binaries. It should not be a precise plan.
 - If you are in academia, contact us using your institution email and provide us a webpage registered at the university domain that contains your name and affiliation.
