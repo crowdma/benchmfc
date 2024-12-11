@@ -23,3 +23,4 @@ Please note that an email not following the conditions might be ignored. And we 
 8. Indian Institute of Technology, Indore
 9. Hebei Normal University
 10. Ludwig-Maximilians-Universität München (LMU)
+11. Fast University Karachi
