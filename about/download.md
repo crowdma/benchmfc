@@ -24,3 +24,5 @@ Please note that an email not following the conditions might be ignored. And we 
 9. Hebei Normal University
 10. Ludwig-Maximilians-Universität München (LMU)
 11. Fast University Karachi
+12. Beijing University of Post and Telecommunications
+13. Queen's University Belfast
