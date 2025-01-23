@@ -26,3 +26,4 @@ Please note that an email not following the conditions might be ignored. And we 
 11. Fast University Karachi
 12. Beijing University of Post and Telecommunications
 13. Queen's University Belfast
+14. Korea University
